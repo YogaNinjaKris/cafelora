@@ -242,7 +242,7 @@ nav a:hover {
   height: 100vh;
 
   color: white;
-  background-image: url('./img/gallery.jpg');
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(129, 42, 42, 0.5)), url('./img/gallery.jpg');
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
@@ -253,7 +253,7 @@ nav a:hover {
 .gallery__popis {
 
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .contacts {
