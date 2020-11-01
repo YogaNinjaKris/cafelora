@@ -1,20 +1,22 @@
 import './index.html';
 import './style.css';
+import { Drink } from './Drink';
 
 console.log('funguju!');
 // 3)Zprovoznění navigace
-const btnElm = document.querySelector('#nav-btn');
-const navElm = document.querySelector('nav');
-const navMenu = () => {
-  navElm.classList.toggle('nav-closed');
-};
+const navbtn = document.getElementById('nav-btn');
+const nav = document.querySelector('nav');
+const navItems = document.querySelectorAll('.navItem');
 
-btnElm.addEventListener ('click', navMenu);
+navbtn.addEventListener('click', () => {
+  nav.classList.toggle('nav-closed');
+});
 
-const a = document.querySelectorAll (a);
-for (let i = 0; i < a.length; i += 1) {
-  a [i].addEventListener('click', aClosed);
-}
+navItems.forEach((nl) => {
+  nl.addEventListener('click', () => {
+    nav.classList.toggle('nav-closed');
+  });
+});
 // konec
 
 // 4)Objednávání
@@ -37,3 +39,21 @@ const orderButton = document.querySelector('.order-btn');
 orderButton.addEventListener('click', drinkCup);
 // konec
 
+// 5)Ingredience jako komponenty
+const layers = [
+  {
+    color: '#feeeca',
+    label: 'mléčná pěna',
+  },
+  {
+    color: '#fed7b0',
+    label: 'teplé mléko',
+  },
+  {
+    color: '#613916',
+    label: 'espresso',
+  },
+];
+
+
+// konec
